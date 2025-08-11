@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "saloonphp/saloon": "^2.5"
+        "saloonphp/saloon": "^3.0"
     },
     "require-dev": {
         "laravel/pint": "^1.2",
