@@ -2,7 +2,7 @@
 
 namespace SabatinoMasala\Replicate\Resources;
 
-use Saloon\Contracts\Connector;
+use Saloon\Http\Connector;
 
 class Resource
 {
