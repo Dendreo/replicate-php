@@ -5,13 +5,18 @@ namespace SabatinoMasala\Replicate;
 use SabatinoMasala\Replicate\Resources\ModelResource;
 use SabatinoMasala\Replicate\Resources\PredictionResource;
 use SabatinoMasala\Replicate\Resources\TrainingResource;
+use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
 
 class Replicate extends Connector
 {
     public function __construct(protected string $apiKey)
     {
-        $this->withTokenAuth($this->apiKey, 'Token');
+    }
+
+    protected function defaultAuth(): TokenAuthenticator
+    {
+        return new TokenAuthenticator($this->apiKey, 'Token');
     }
 
     public function predictions()
